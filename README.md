@@ -1,8 +1,8 @@
 # [V] Staff Chat 2.0 
-![](https://img.shields.io/github/downloads/vipexv/v-staffchat-remake/total?logo=github)
-![](https://img.shields.io/github/downloads/vipexv/v-staffchat-remake/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/vipexv/v-staffchat-remake?logo=github)
-![](https://img.shields.io/github/v/release/vipexv/v-staffchat-remake?logo=github) 
+![](https://img.shields.io/github/downloads/vipexv/v-staffchat-2.0/total?logo=github)
+![](https://img.shields.io/github/downloads/vipexv/v-staffchat-2.0/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/vipexv/v-staffchat-2.0?logo=github)
+![](https://img.shields.io/github/v/release/vipexv/v-staffchat-2.0?logo=github) 
 
 TODO: Script Info
 
