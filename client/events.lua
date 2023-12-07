@@ -8,6 +8,7 @@ RegisterNetEvent("staffchat:client:admins", function(data)
  end
 
  Debug("[staffchat:client:admins] Data param:", json.encode(data))
+
  UIMessage("staffchat:nui:admins", data)
 end)
 
