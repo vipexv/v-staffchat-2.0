@@ -1,4 +1,4 @@
-# [V] Staff Chat
+# [V] Staff Chat 2.0 
 ![](https://img.shields.io/github/downloads/vipexv/v-staffchat-remake/total?logo=github)
 ![](https://img.shields.io/github/downloads/vipexv/v-staffchat-remake/latest/total?logo=github)
 ![](https://img.shields.io/github/contributors/vipexv/v-staffchat-remake?logo=github)
