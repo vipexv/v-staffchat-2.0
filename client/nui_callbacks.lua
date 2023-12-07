@@ -11,6 +11,7 @@ RegisterNUICallback("staffchat:nui:cb:firemessage", function(data, cb)
 
  Debug("[staffchat:nui:cb:firemessage] First param: ", json.encode(data))
  TriggerServerEvent("staffchat:server:firemessage", data)
+
  cb({})
 end)
 
