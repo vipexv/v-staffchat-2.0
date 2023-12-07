@@ -136,7 +136,11 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
             console.log("submitted");
           }}
         > */}
-        <div className="flex flex-col w-full gap-2 h-full rounded bg-[#1a1a1a] bg-opacity-50 border-[#1a1a1a]">
+        <div
+          className={`flex flex-col w-full gap-2 h-full rounded ${
+            userSettings.theme === "default" ? "bg-[#1a1a1a]" : "bg-[#2a2a2a]"
+          } bg-opacity-50 border-[#1a1a1a]`}
+        >
           <ScrollArea
             viewportRef={scrollViewport}
             type="auto"
@@ -221,7 +225,13 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
           <div className="flex flex-col justify-center items-center w-full">
             {!!suggestionsVisibility && (
               <>
-                <div className="bg-[#1a1a1a] absolute mb-52 font-inter rounded-[2px] p-2 w-[30dvh]">
+                <div
+                  className={`${
+                    userSettings.theme === "default"
+                      ? "bg-[#1a1a1a]"
+                      : "bg-[#2a2a2a]"
+                  } absolute mb-52 font-inter rounded-[2px] p-2 w-[30dvh]"`}
+                >
                   <div className="flex flex-col justify-center gap-2 text-sm">
                     <p>Available Commands</p>
                     {commands.map((value, index) => {

@@ -53,6 +53,12 @@ const SettingsTab: React.FC<Props> = ({ userSettings }) => {
             </p>
             <SegmentedControl
               value={globalSettings.theme}
+              styles={{
+                root: {
+                  backgroundColor:
+                    userSettings.theme === "default" ? "#242424" : "#1a1a1a",
+                },
+              }}
               onChange={(e) => {
                 setGlobalSettings({
                   ...globalSettings,
@@ -88,7 +94,13 @@ const SettingsTab: React.FC<Props> = ({ userSettings }) => {
               Settings
             </p>
             <div className="flex flex-col justify-center items-center mt-5">
-              <div className="flex items-center justify-between font-inter p-2 rounded bg-[#242424]">
+              <div
+                className={`flex items-center justify-between font-inter p-2 rounded ${
+                  userSettings.theme === "default"
+                    ? "bg-[#242424]"
+                    : "bg-[#1a1a1a]"
+                }`}
+              >
                 <Switch
                   defaultChecked
                   checked={globalSettings.notifications}
