@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "homepage": "web/build",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "vite",
+    "start:game": "vite build --watch",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/carousel": "^7.3.0",
+    "@mantine/code-highlight": "^7.3.0",
+    "@mantine/core": "^7.3.0",
+    "@mantine/dates": "^7.3.0",
+    "@mantine/form": "^7.3.0",
+    "@mantine/hooks": "^7.3.0",
+    "@mantine/modals": "^7.3.0",
+    "@mantine/notifications": "^7.3.0",
+    "@mantine/nprogress": "^7.3.0",
+    "@mantine/spotlight": "^7.3.0",
+    "dayjs": "^1.11.10",
+    "embla-carousel-react": "^8.0.0-rc15",
+    "framer-motion": "^10.16.14",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.32",
+    "postcss-preset-mantine": "^1.11.1",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
+  }
+}

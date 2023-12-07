@@ -1,0 +1,5 @@
+PlayerData = {}
+
+ScriptState = {
+ settingsLoaded = false
+}
