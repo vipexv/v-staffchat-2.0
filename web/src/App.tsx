@@ -73,7 +73,9 @@ const App: React.FC = () => {
     },
   ]);
 
-  useNuiEvent("staffchat:settings", setSettings);
+  useNuiEvent<Settings>("staffchat:nui:settings", (psettings) => {
+    setSettings(psettings);
+  });
 
   useNuiEvent("staffchat:nui:notify", (info) => {
     if (!info) return;
@@ -89,11 +91,8 @@ const App: React.FC = () => {
   useNuiEvent<Message>("staffchat:nui:firemessage", (data) => {
     if (!data) return;
 
-    console.log(`New message added: ${JSON.stringify(data)}`);
-
     setMessages([...messages, data]);
 
-    console.log(JSON.stringify(messages));
     if (!visible && settings.notifications) {
       notifications.show({
         title: "Staff Chat | New Message",
@@ -169,11 +168,18 @@ const App: React.FC = () => {
               </Tabs.List>
 
               <Tabs.Panel value="chat">
-                <ChatTab messages={messages} sourceData={sourceData} />
+                <ChatTab
+                  messages={messages}
+                  sourceData={sourceData}
+                  userSettings={settings}
+                />
               </Tabs.Panel>
 
               <Tabs.Panel value="onlineStaff">
-                <OnlineStaffTab staffMembers={activeStaff} />
+                <OnlineStaffTab
+                  staffMembers={activeStaff}
+                  userSettings={settings}
+                />
               </Tabs.Panel>
 
               <Tabs.Panel value="settings">

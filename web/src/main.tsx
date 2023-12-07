@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     {/* <VisibilityProvider> */}
     <MantineProvider defaultColorScheme="dark">
       <Notifications
-        autoClose={1500}
+        autoClose={3000}
         position="bottom-right"
         styles={{
           notification: {

@@ -21,6 +21,7 @@ import { notifications } from "@mantine/notifications";
 interface Props {
   messages: Message[];
   sourceData: any;
+  userSettings: any;
 }
 
 interface Message {
@@ -40,7 +41,7 @@ const initialMessageData: Message = {
   inputData: "",
   date_time: "N/A",
 };
-const ChatTab: React.FC<Props> = ({ messages, sourceData }) => {
+const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
   const [messageData, setMessageData] = useState<Message>(initialMessageData);
 
   const scrollViewport = useRef<HTMLDivElement>(null);
@@ -119,7 +120,7 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData }) => {
           onSubmit={handleSubmit}
         >
           <TextInput
-            className="rounded w-full p-1 text-white font-inter font-semibold active:scale-95 transition"
+            className={`rounded w-full p-1 text-white font-inter font-semibold transition`}
             leftSection={<MessagesSquare size={16} />}
             placeholder="Input a message"
             value={messageData.inputData}
@@ -131,7 +132,8 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData }) => {
             }}
             styles={{
               input: {
-                backgroundColor: "#1a1a1a",
+                backgroundColor:
+                  userSettings.theme === "default" ? "#1a1a1a" : "#2a2a2a",
                 border: "none",
                 color: "white",
               },

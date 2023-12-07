@@ -8,19 +8,20 @@ RegisterCommand(Config.CommandName, function()
  if not ScriptState.settingsLoaded then
   local settingsKvp = GetResourceKvpString("staffchat:settings")
 
-  if not settingsKvp then
-   return Debug("settings kvp is null, returning.")
+  if settingsKvp then
+   local settings = json.decode(settingsKvp)
+   UIMessage("staffchat:nui:settings", settings)
+   Debug("Settings sent to the NUI:", json.encode(settings))
   end
 
-  local settings = json.decode(settingsKvp)
 
-  UIMessage("staffchat:nui:settings", settings)
+  ScriptState.settingsLoaded = true
  end
 
 
  if not PlayerData.isStaff then
   -- TODO: Notification System
-  return Debug("Player is not a staff member.")
+  return Notify("You are not a staff member!")
  end
 
  TriggerServerEvent("staffchat:server:admins")

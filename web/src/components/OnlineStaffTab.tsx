@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 
 interface Props {
   staffMembers: StaffMember[];
+  userSettings: any;
 }
 
 interface Message {
@@ -29,7 +30,7 @@ interface StaffMember {
   isStaff: boolean;
 }
 
-const OnlineStaffTab: React.FC<Props> = ({ staffMembers }) => {
+const OnlineStaffTab: React.FC<Props> = ({ staffMembers, userSettings }) => {
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -63,7 +64,11 @@ const OnlineStaffTab: React.FC<Props> = ({ staffMembers }) => {
               if (!staff) return;
               return (
                 <motion.div
-                  className="bg-[#1a1a1a] rounded px-2 py-2 w-full min-w-[150px] font-semibold m-3 flex items-center justify-between text-xs"
+                  className={`${
+                    userSettings.theme === "default"
+                      ? "bg-[#1a1a1a]"
+                      : "bg-[#2a2a2a]"
+                  } rounded px-2 py-2 w-full min-w-[150px] font-semibold m-3 flex items-center justify-between text-xs`}
                   key={index}
                   variants={item}
                 >

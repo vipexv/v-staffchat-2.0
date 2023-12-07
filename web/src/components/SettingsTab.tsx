@@ -37,14 +37,8 @@ interface Props {
   userSettings: any;
 }
 
-const initialSettings: Settings = {
-  theme: "default",
-  notifications: true,
-};
-
 const SettingsTab: React.FC<Props> = ({ userSettings }) => {
-  const [globalSettings, setGlobalSettings] =
-    useState<Settings>(initialSettings);
+  const [globalSettings, setGlobalSettings] = useState<Settings>(userSettings);
 
   useEffect(() => {
     fetchNui("staffchat:nui:cb:settings", globalSettings);
@@ -64,7 +58,6 @@ const SettingsTab: React.FC<Props> = ({ userSettings }) => {
                   ...globalSettings,
                   theme: e as Settings["theme"],
                 });
-                console.log(e);
               }}
               // color=""
               className="mt-10"
