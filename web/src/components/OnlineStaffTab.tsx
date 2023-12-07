@@ -54,7 +54,7 @@ const OnlineStaffTab: React.FC<Props> = ({ staffMembers, userSettings }) => {
     <>
       <div className="w-[55dvh] h-[44dvh] bg-[#1a1a1a] rounded bg-opacity-50 transition">
         <motion.div
-          className="grid grid-cols-4 gap-40 w-full"
+          className="grid grid-cols-4 gap-40 w-full overflow-y-scroll"
           variants={container}
           initial="hidden"
           animate="visible"
