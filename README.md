@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/contributors/vipexv/v-staffchat-2.0?logo=github)
 ![](https://img.shields.io/github/v/release/vipexv/v-staffchat-2.0?logo=github) 
 
-Hellooo, i've been getting allot of messages recently about the my old staff chat script which was released a bit ago, it's been outdated for a little bit now, and it has been needing a re-work, especially with my Tech Stack & Skills having changed and improved allot over the time period, so i wanted to go ahead and just make a new version  for the people still looking for it.
+Hellooo, i’ve been getting allot of messages recently about the my old staff chat script which was released a bit ago, it’s been outdated for a little bit now, and it has been needing a re-work, especially with my Tech Stack & Skills having changed and improved allot over the time period, so i wanted to go ahead and just make a new version for the people still interested.
 
 None of the code is being re-used, this is completely new and a huge improvement in every aspect.
 
