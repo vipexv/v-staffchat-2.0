@@ -1,5 +1,5 @@
 PlayerData = {}
 
 ScriptState = {
- settingsLoaded = false
+  settingsLoaded = false
 }

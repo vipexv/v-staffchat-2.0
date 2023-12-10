@@ -8,7 +8,7 @@ import "./index.css";
 
 // Mantine
 import "@mantine/core/styles.css";
-import { MantineProvider, createTheme } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 
 // import { MantineThemeProvider } from "@mantine/core";

@@ -1,18 +1,18 @@
 // React
-import React, { useState, useEffect, useRef, FormEventHandler } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // CSS
 import "../App.css";
 
 // Cool :o
-import { debugData } from "../utils/debugData";
+// import { debugData } from "../utils/debugData";
 import { fetchNui } from "../utils/fetchNui";
-import { useNuiEvent } from "../hooks/useNuiEvent";
-import { isEnvBrowser } from "../utils/misc";
+// import { useNuiEvent } from "../hooks/useNuiEvent";
+// import { isEnvBrowser } from "../utils/misc";
 import { motion } from "framer-motion";
 
 // Icons
-import { ImageMinus, Info, MessagesSquare, Send } from "lucide-react";
+import { MessagesSquare, Send } from "lucide-react";
 
 // Mantine
 import { Button, TextInput, ScrollArea } from "@mantine/core";
@@ -122,20 +122,10 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
     setMessageData(initialMessageData);
     setSuggestionsVisibility(false);
   };
-  const containerVariants = {
-    initial: { x: "-100%" },
-    animate: { x: 0 },
-    exit: { x: "100%" },
-  };
 
   return (
     <>
       <div className="w-[44dvh] h-[44dvh] flex flex-col items-start justify-end">
-        {/* <form
-          onSubmit={() => {
-            console.log("submitted");
-          }}
-        > */}
         <div
           className={`flex flex-col w-full gap-2 h-full rounded ${
             userSettings.theme === "default" ? "bg-[#1a1a1a]" : "bg-[#2a2a2a]"
@@ -166,7 +156,6 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
                   commandInfo.renderImage = true;
                   commandInfo.imageUrl = image;
                 }
-                // console.log(messageArray[1]);
               }
 
               return (
@@ -186,9 +175,6 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
                           className={`rounded-[2px] p-1 max-w-[250px] whitespace-break-spaces break-words ${
                             isSource ? "bg-[#383838]" : "bg-cyan-400"
                           }`}
-                          // style={{
-                          //   overflowWrap: "break-word",
-                          // }}
                         >
                           {message.inputData}
                         </p>

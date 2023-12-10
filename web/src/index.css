@@ -9,7 +9,7 @@
 }
 :root {
   background: transparent !important;
-  color-scheme: light !important;
+  color-scheme: only light !important;
 }
 
 body {
