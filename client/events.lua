@@ -3,7 +3,7 @@ RegisterNetEvent("UIMessage", function(action, data)
 end)
 
 RegisterNetEvent("staffchat:client:admins", function(data)
-  if not next(data) then
+  if not data then
     return Debug("[staffchat:client:admins] Event was called but the first param is either null or not a table.")
   end
 
