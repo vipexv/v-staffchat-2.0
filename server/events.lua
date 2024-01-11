@@ -5,7 +5,7 @@ RegisterNetEvent("staffchat:server:admins", function()
 
   if not AdminData[tostring(source)] then
     -- TODO: Notification system.
-    return Debug("Player is not a staff member.")
+    return Debug("[netEvent:staffchat:server:admins] Player is not a staff member.")
   end
 
   TriggerClientEvent("staffchat:client:admins", source, AdminData)
@@ -18,13 +18,13 @@ RegisterNetEvent("staffchat:server:firemessage", function(data)
   end
 
   if not next(data) then
-    return Debug("[staffchat:server:firemessage] Event was called, but the first param is null/missing.")
+    return Debug("[netEvent:staffchat:server:firemessage] Event was called, but the first param is null/missing.")
   end
 
 
   data.adminData = AdminData[tostring(source)]
 
-  Debug("[staffchat:server:firemessage] Data: ", json.encode(data))
+  Debug("[netEvent:staffchat:server:firemessage] Data: ", json.encode(data))
 
   for _, v in pairs(AdminData) do
     ---@diagnostic disable-next-line: param-type-mismatch
@@ -35,7 +35,7 @@ end)
 
 RegisterNetEvent("staffchat:server:permissions", function()
   if not AdminData[tostring(source)] then
-    Debug("[staffchat:server:permissions] Player is not staff.")
+    Debug("[netEvent:staffchat:server:permissions] Player is not staff.")
 
     -- Not the best, but it works.
 
@@ -49,6 +49,6 @@ RegisterNetEvent("staffchat:server:permissions", function()
     return
   end
 
-  Debug("[staffchat:server:permissions] AdminData[tostring(source)]:", json.encode(AdminData[tostring(source)]))
+  Debug("[netEvent:staffchat:server:permissions] AdminData[tostring(source)]:", json.encode(AdminData[tostring(source)]))
   TriggerClientEvent("staffchat:client:permissions", source, AdminData[tostring(source)])
 end)

@@ -22,11 +22,11 @@ end)
 
 AddEventHandler("playerDropped", function(_reason)
   if not AdminData[tostring(source)] then
-    return Debug("[playerDropped] Event was triggered, but the source isn't in the AdminData table.")
+    return Debug("[netEvent:playerDropped] Event was triggered, but the source isn't in the AdminData table.")
   end
 
   AdminData[tostring(source)] = nil
-  Debug("[playerDropped] Event was triggered, and the player was removed from the AdminData table.")
+  Debug("[netEvent:playerDropped] Event was triggered, and the player was removed from the AdminData table.")
 end)
 
 SetTimeout(200, function()

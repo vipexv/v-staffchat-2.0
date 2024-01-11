@@ -20,7 +20,6 @@ RegisterCommand(Config.CommandName, function()
 
 
     if not PlayerData.isStaff then
-        -- TODO: Notification System
         return Notify("You are not a staff member!")
     end
 
