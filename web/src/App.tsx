@@ -147,16 +147,14 @@ const App: React.FC = () => {
 
   return (
     <>
-      {!!visible && (
-        <>
-          <motion.div
-            className="absolute bottom-2 right-10"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              duration: 0.1,
-            }}
-          >
+      <Transition
+        mounted={visible}
+        duration={400}
+        transition={"slide-up"}
+        timingFunction="ease"
+      >
+        {(styles) => (
+          <div style={styles} className="absolute bottom-2 right-10">
             <Tabs
               color="dark"
               variant="pills"
@@ -206,9 +204,9 @@ const App: React.FC = () => {
                 <SettingsTab userSettings={settings} />
               </Tabs.Panel>
             </Tabs>
-          </motion.div>
-        </>
-      )}
+          </div>
+        )}
+      </Transition>
     </>
   );
 };

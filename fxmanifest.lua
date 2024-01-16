@@ -19,6 +19,9 @@ client_scripts {
 	"client/core.lua"
 }
 server_scripts {
+	"sv_config.lua",
+	"server/sv_utils.lua",
+	"server/modules/**/*",
 	"server/Classes/**/*",
 	"server/core.lua",
 	"server/events.lua",
