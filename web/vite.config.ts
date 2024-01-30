@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [million.vite({ auto: true }), react()],
   base: "./",
   build: {
-    outDir: "build",
+    outDir: "dist",
     chunkSizeWarningLimit: 100,
     rollupOptions: {
       onwarn(warning, warn) {
