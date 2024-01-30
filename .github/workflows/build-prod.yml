@@ -27,14 +27,14 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies
-        run: cd web && npm install
+        run: cd web && pnpm i
 
       # - name: Bump package version
       #   run: npm version ${{ github.ref_name }}
       #   working-directory: web
 
       - name: Run build
-        run: npm run build
+        run: pnpm run build
         working-directory: web
         env:
           CI: false
