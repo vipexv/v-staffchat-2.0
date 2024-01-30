@@ -1,16 +1,6 @@
-// React
-// import React from "react";
-
-// CSS
-import "../App.css";
-
-// Cool :o
-// import { debugData } from "../utils/debugData";
-// import { fetchNui } from "../utils/fetchNui";
-// import { useNuiEvent } from "../hooks/useNuiEvent";
-// import { isEnvBrowser } from "../utils/misc";
 import { User } from "lucide-react";
 import { motion } from "framer-motion";
+import "../App.css";
 
 interface Props {
   staffMembers: StaffMember[];

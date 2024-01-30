@@ -26,21 +26,21 @@ debugData([
   },
 ]);
 
-debugData([
-  {
-    action: "staffchat:nui:firemessage",
-    data: {
-      adminData: {
-        id: 1,
-        name: "vipex",
-        isStaff: true,
-      },
-      date_time: "N/A",
-      inputData:
-        "/image https://cdn.discordapp.com/attachments/839129248265666589/1178613078653415475/image2_1.jpg?ex=65800277&is=656d8d77&hm=3df933ad893f02e8e6ce3d5b610ba23ea478809799cb951158038bd58f8b0549&",
-    },
-  },
-]);
+// debugData([
+//   {
+//     action: "staffchat:nui:firemessage",
+//     data: {
+//       adminData: {
+//         id: 1,
+//         name: "vipex",
+//         isStaff: true,
+//       },
+//       date_time: "N/A",
+//       inputData:
+//         "/image https://cdn.discordapp.com/attachments/839129248265666589/1178613078653415475/image2_1.jpg?ex=65800277&is=656d8d77&hm=3df933ad893f02e8e6ce3d5b610ba23ea478809799cb951158038bd58f8b0549&",
+//     },
+//   },
+// ]);
 
 interface Message {
   adminData: StaffMember;

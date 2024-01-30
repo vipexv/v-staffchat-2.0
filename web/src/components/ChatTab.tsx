@@ -125,7 +125,7 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
 
   return (
     <>
-      <div className="w-[44dvh] h-[44dvh] flex flex-col items-start justify-end">
+      <div className="w-[46dvh] h-[46dvh] flex flex-col items-start justify-end">
         <div
           className={`flex flex-col w-full gap-2 h-full rounded ${
             userSettings.theme === "default" ? "bg-[#1a1a1a]" : "bg-[#2a2a2a]"
@@ -140,7 +140,7 @@ const ChatTab: React.FC<Props> = ({ messages, sourceData, userSettings }) => {
           >
             {Object.values(messages).map((message: Message, index: number) => {
               const isSource =
-                sourceData.id.toString() === message.adminData?.id.toString();
+                sourceData.id.toString() === message.adminData?.id?.toString();
 
               const isImageCommand = message.inputData.startsWith("/image");
               const commandInfo = {

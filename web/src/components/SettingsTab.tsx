@@ -1,19 +1,9 @@
-// React
-import React, { useState, useEffect } from "react";
-
-// CSS
-import "../App.css";
-
-// Cool :o
-// import { debugData } from "../utils/debugData";
+import React, { useEffect, useState } from "react";
 import { fetchNui } from "../utils/fetchNui";
-// import { useNuiEvent } from "../hooks/useNuiEvent";
-// import { isEnvBrowser } from "../utils/misc";
-// import { motion } from "framer-motion";
-
-// Mantine
 import { SegmentedControl, Switch } from "@mantine/core";
 import { Bell, BellOff, Palette } from "lucide-react";
+
+import "../App.css";
 
 interface Message {
   adminData: StaffMember;
