@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { fetchNui } from "../utils/fetchNui";
 import { SegmentedControl, Switch } from "@mantine/core";
 import { Bell, BellOff, Palette } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { fetchNui } from "../utils/fetchNui";
 
 import "../App.css";
 
@@ -14,7 +14,6 @@ interface Message {
 interface StaffMember {
   id: string | number;
   name: string;
-  // Unused but it's in there.
   isStaff: boolean;
 }
 
@@ -33,9 +32,10 @@ const SettingsTab: React.FC<Props> = ({ userSettings }) => {
   useEffect(() => {
     fetchNui("staffchat:nui:cb:settings", globalSettings);
   }, [globalSettings]);
+
   return (
     <>
-      <div className="w-[55dvh] h-[44dvh] bg-[#2a2a2a] rounded bg-opacity-50 font-inter">
+      <div className="w-[46dvh] h-[46dvh] bg-[#2a2a2a] rounded bg-opacity-50 font-inter">
         <div className="flex flex-col w-full justify-center items-center">
           <div className="flex flex-col justify-center items-center mt-10">
             <p className="font-bold font-horizon bg-[#1a1a1a] rounded px-2 py-1 bg-opacity-50 border border-[#1a1a1a]">

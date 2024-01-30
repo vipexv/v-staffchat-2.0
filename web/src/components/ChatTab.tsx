@@ -1,5 +1,5 @@
 // React
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // CSS
 import "../App.css";
@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 import { MessagesSquare, Send } from "lucide-react";
 
 // Mantine
-import { Button, TextInput, ScrollArea } from "@mantine/core";
+import { Button, ScrollArea, TextInput } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 
 interface Props {

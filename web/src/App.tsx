@@ -81,10 +81,14 @@ const App: React.FC = () => {
     {
       action: "staffchat:nui:admins",
       data: [
-        null,
-        null,
+        { isStaff: true, name: "vipex", id: "1" },
+        { isStaff: true, name: "vipex_2", id: "2" },
         { isStaff: true, name: "vipex", id: "3" },
         { isStaff: true, name: "vipex_2", id: "4" },
+        { isStaff: true, name: "vipex", id: "5" },
+        { isStaff: true, name: "vipex_2", id: "6" },
+        { isStaff: true, name: "vipex", id: "7" },
+        { isStaff: true, name: "vipex_2", id: "8" },
       ],
     },
   ]);
