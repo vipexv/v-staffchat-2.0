@@ -28,7 +28,7 @@ const OnlineStaffTab: React.FC<Props> = ({ staffMembers, userSettings }) => {
         } rounded bg-opacity-50 transition`}
       >
         <ScrollArea h={500}>
-          <div className=" grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className=" m-1 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {Object.values(staffMembers).map(
               (staff: StaffMember, index: number) => {
                 if (!staff) return;
