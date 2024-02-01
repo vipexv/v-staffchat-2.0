@@ -17,10 +17,8 @@ RegisterCommand(Config.CommandName, function()
         ScriptState.settingsLoaded = true
     end
 
-
-
     if not PlayerData.isStaff then
-        return Notify("You are not a staff member!")
+        return Notify("Insufficient Permissions!")
     end
 
     TriggerServerEvent("staffchat:server:admins")
