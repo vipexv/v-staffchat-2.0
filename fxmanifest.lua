@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'vipex [Discord: vipex.v]'
 description 'Advanced NUI Based FiveM StaffChat'
-ui_page 'web/build/index.html'
+ui_page 'web/dist/index.html'
 
 shared_scripts {
 	"config.lua",
@@ -28,6 +28,6 @@ server_scripts {
 }
 
 files {
-	'web/build/index.html',
-	'web/build/**/*',
+	'web/dist/index.html',
+	'web/dist/**/*',
 }

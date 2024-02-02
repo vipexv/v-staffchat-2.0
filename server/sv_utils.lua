@@ -64,7 +64,7 @@ VersionCheck = function(repository)
     end)
 end
 
-if not LoadResourceFile(GetCurrentResourceName(), 'web/build/index.html') then
+if not LoadResourceFile(GetCurrentResourceName(), 'web/dist/index.html') then
     local err =
     'Unable to load UI. Build v-staffchat-2.0 or download the latest release.\n https://github.com/vipexv/v-staffchat-2.0/releases/latest'
     print(err)
